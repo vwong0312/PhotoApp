@@ -1,0 +1,21 @@
+<header>
+    <div class="header-img">
+        <img src="https://theglitchy.com/kaomoji_images/cat_3.png" width="450" height="200" class="logo">
+
+        <nav id="head" class="nav-bar">
+            <ul>
+                <input id="search-text" type="text" >
+                <li id="search-button"><a id="search-button">Search</a></li>
+                <li id="home-button"><a href="/">Home</a></li>
+                <li id="post-button"><a href="/postimage">Post Now</a></li>
+                <li id="register-button"><a href="/registration ">Register Now</a></li>
+
+                {{#if logged}}
+                <li><a id="logout-button">Log Out</a></li>
+                {{else}}
+                <li><a href="/login" id="login-button">Login</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </div>
+</header>

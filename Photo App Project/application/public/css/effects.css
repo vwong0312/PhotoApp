@@ -1,0 +1,234 @@
+fieldset {
+    border: 10px ridge rgb(49, 206, 211);
+    background-color: white;
+}
+legend {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 30px;
+    color: black;
+    border-radius: 10px;
+    border: 5px ridge rgb(49, 206, 211);
+    background-color: white;
+}
+label {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: black;
+    font-size: 20px;
+    width: 180px;
+    display: inline-block;
+    text-align:left;
+    
+}
+button {
+    color: black;
+    padding: 5px;
+    background: rgb(49, 206, 211);
+    font-size: 16px;
+    line-height: 16px;
+    padding: 8px;
+    border-radius: 10px;
+}
+button:hover {
+    background: #00ff21;
+}
+button:active {
+    background:  #ff0000;
+}
+a {
+    font-size: 20px;
+}
+a:hover {
+    background: #f72206;
+}
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    color: #f50505;
+}
+.tos-box{
+    border-radius: 10px;
+}
+body {
+    background: url("https://wallpaperaccess.com/full/1761712.jpg") center center fixed;
+    background-size: 100%;
+    padding-bottom: 100%;
+}
+
+#flash-message {
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%,0);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 30px;
+    color: black;
+    border-radius: 5px;
+    background-color: green;
+}
+
+#flash-message div {
+    text-align: center;
+}
+.anchor-buttons{
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    padding-bottom: .3rem;
+}
+#container {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    gap: .5rem .5rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 150px 150px;
+    grid-template-columns: auto;
+    border: 0.01rem solid black;
+    border-radius: .01rem;
+}
+.card-image{
+    grid-area: 1 / 1 / 2 / 2;
+}
+div[class=card] > img {
+    height: 100%;
+    width: 100%;
+}
+.card-title {
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin-top: 0;
+    font-size: 30px;
+}
+.card-text {
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.card-body{
+    grid-area: 2 / 1 / 3 / 2;
+    padding: 0.5rem;
+    background-color: rgb(49, 206, 211);
+    border-radius: 0 0 .2rem .2rem;
+}
+
+.info-tags{
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5rem;
+    background: white;
+}
+
+#author {
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5rem;
+    background: white;
+}
+
+#post-container {
+    grid-area: content;
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    grid-template-areas: "photo comments";
+
+}
+
+#photo-container {
+background-color: white;
+flex-direction: column;
+flex-wrap: wrap;
+}
+
+#comment-container {
+    display: grid;
+    grid-area: comments;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 75px;
+    gap: .2rem;
+    grid-template-areas: 
+    "messages"
+    "comment-box";
+    max-height: 80vh;
+
+}
+
+#messages {
+    grid-area: messages;
+    overflow-y: auto;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    scroll-behavior: smooth;
+    border: 1px solid black;
+    border-radius: .4rem;
+    background-color: white;
+}
+#comment-box-text{
+    border: 1px solid #848484;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	outline:0;
+	height:25px;
+	width: 275px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+div[id^=message-]{
+    display: grid;
+    grid-template-rows: .3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: .1em;
+    padding: .25rem;
+    margin: .2rem;
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.1rem;
+    grid-template-areas: 
+    "author created"
+    "comment comment";
+}
+
+.author-text{
+    grid-area: author;
+    justify-self: start;
+    color: rgb(49, 206, 211);
+}
+
+.comment-text{
+    grid-area: comment;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.date-posted{
+    grid-area: created;
+    justify-self: end;
+}
+
+#comment-box-button{
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius: 2rem;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:6px 24px;
+    width: 50px;
+    height: 25px;
+}
+

@@ -1,0 +1,38 @@
+header{
+    background-color: rgb(49, 206, 211);
+}
+.header-img{
+    width: 80%;
+    margin: 0 auto;
+    float: left;
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+nav{
+    float: right;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    margin-left: 50px;
+    padding-top: 80px;
+}
+nav a{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    color:black;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    background-color: white;
+    border-radius: 1em;
+}
+nav input {
+    padding: 0.5em 3em;
+}

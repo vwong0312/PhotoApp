@@ -1,0 +1,22 @@
+<form id="postimage" method="POST" enctype="multipart/form-data" action='/posts/createPost'>
+	<fieldset>
+		<legend>Post an image</legend>
+		<label for="post-title">Image Title: </label>
+		<input id="post-title" type="text" name="title" required/>
+		<br />
+
+		<label for="post-desc">Image Description: </label>
+		<input id="post-desc" type="text" name="description" required/>
+		<br />
+
+		<label>Select an Image: </label>
+		<input id="image-select" class="image-select" type="file" name="uploadImage" required>
+		<br />
+
+		<label>Agree to Acceptable Use Policy </label>
+		<input type="checkbox" />
+		<br />
+		<button class="post" type="submit">Submit Now !</button>
+	</fieldset>
+</form>
+<div class="div-image"></div>

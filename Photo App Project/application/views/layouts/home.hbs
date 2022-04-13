@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/public/css/effects.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/navbar.css">
+    <script defer type="text/javascript" src="/public/js/register.js"></script> 
+    <script defer type="text/javascript" src="/public/js/frontendjs.js"></script> 
+</head>
+<body>
+    {{>header}}
+    {{#if (emptyObject messages)}}
+    {{> flashmessage}}
+    {{/if}}
+    <br>
+    {{{body}}}
+
+    {{#if logged}}
+        <script>
+            let element = document.getElementById('logout-button');
+            if(element){
+                element.onclick = (event) =>{
+                    fetch('/users/logout', 
+                    {method:"POST"})
+                    .then((data) =>{
+                        location.replace('/');
+                    })
+                }
+            }
+        </script>
+    {{/if}}
+</body>
+
+</html>
+
